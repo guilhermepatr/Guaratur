@@ -11,3 +11,18 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+.valor {
+    font-weight: bold;
+}
+
+h4 {
+    font-size: clamp(1.3rem, 2vw, 2.6rem);
+    /* Ajuste os valores conforme necessário */
+}
+
+/* Título dos cards de pontos turísticos */
+.card-image .card-title {
+    font-size: clamp(1.2rem, 2.5vw, 3rem);
+    /* Ajuste os valores conforme necessário */
+}
