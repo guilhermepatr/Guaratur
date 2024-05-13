@@ -1,0 +1,107 @@
+:root {
+  --font-size-small: 16px;
+  /* Tamanho padrão para celulares */
+  --font-size-medium: 18px;
+  /* Tamanho para tablets */
+  --font-size-large: 20px;
+  /* Tamanho para notebooks e desktops */
+}
+
+.valor {
+  font-weight: bold;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-size: var(--font-size-small);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: var(--font-size-medium);
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    font-size: var(--font-size-large);
+  }
+}
+
+.gallery-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 20px;
+}
+
+.gallery-flex .card {
+  flex-basis: 100%;
+}
+
+.card img {
+  width: 100%;
+  /* Garante que a imagem ocupe toda a largura do card */
+  height: 100%;
+  /* Garante que a imagem ocupe toda a altura do card */
+  object-fit: cover;
+}
+
+@media (min-width: 600px) {
+  .gallery-flex .card {
+    flex-basis: 40%;
+  }
+}
+
+@media (min-width: 992px) {
+  .gallery-flex .card {
+    flex-basis: 22%;
+  }
+}
+
+.descricao-galeria {
+  font-size: 1.375rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 17%;
+  margin-left: 17%;
+}
+
+.descricao-galeria h2 {
+  text-align: center;
+  font-size: 1.875rem;
+}
+
+/* Para telas de tamanho médio (tablet), 18px */
+@media only screen and (max-width: 768px) {
+  .descricao-galeria {
+    font-size: 1.125rem;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  .descricao-galeria h2 {
+    font-size: 24px;
+    /* Você pode ajustar esse valor conforme necessário */
+  }
+}
+
+/* Para telas pequenas (celulares), 16px */
+@media only screen and (max-width: 480px) {
+  .descricao-galeria {
+    font-size: 1rem;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .descricao-galeria h2 {
+    font-size: 1.25rem;
+    /* Você pode ajustar esse valor conforme necessário */
+  }
+}
